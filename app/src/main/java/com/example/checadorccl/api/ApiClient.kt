@@ -10,7 +10,7 @@ object ApiClient {
 
     // CAMBIA ESTA IP POR LA DE TU PC si usas celular físico
     // Si usas emulador, usa "http://10.0.2.2:8000/api/"
-    private const val BASE_URL = "https://biotimecontrol.online/api/"
+    private const val BASE_URL = "https://localhost/api/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY // Para ver en el Logcat qué enviamos y recibimos

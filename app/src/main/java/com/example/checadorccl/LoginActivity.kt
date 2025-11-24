@@ -96,7 +96,7 @@ class LoginActivity : AppCompatActivity() {
 
         // CONFIGURAR GOOGLE CLIENT
         // Asegúrate de que este ID sea el de la Web (OAuth 2.0 Client ID)
-        val webClientId = "15137170843-pvj5m6c9nold0ruome0ke8hj7rcau5m7.apps.googleusercontent.com"
+        val webClientId = "mikey"
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(webClientId)
