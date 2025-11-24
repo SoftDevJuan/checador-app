@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:background="@drawable/calendar_day_background_selector">
+
+    <!-- Número del día -->
+    <TextView
+        android:id="@+id/calendarDayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="14sp"
+        android:textColor="@color/color_text_dark"
+        tools:text="22" />
+
+    <!-- Etiqueta del Evento (Visible solo si hay evento) -->
+    <TextView
+        android:id="@+id/calendarEventLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/rounded_event_label"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:visibility="gone"
+        tools:text="Vacaciones"
+        tools:visibility="visible"
+        tools:backgroundTint="#F37021"/>
+
+</LinearLayout>

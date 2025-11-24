@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txtDetailType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retraso"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_text_dark"/>
+
+        <TextView
+            android:id="@+id/txtDetailDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 Nov 2025"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/txtDetailStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado: En Revisión"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="@drawable/rounded_event_label"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Detalles de Tiempos -->
+        <TextView text="Registro de Tiempo" style="@style/SectionTitleStyle"/>
+
+        <TextView android:id="@+id/txtDetailTimeInfo" style="@style/DetailTextStyle" text="Entrada: --:-- | Salida: --:--"/>
+        <TextView android:id="@+id/txtDetailTotalHours" style="@style/DetailTextStyle" text="Total: 8h" android:layout_marginTop="4dp"/>
+
+        <View style="@style/DividerStyle"/>
+
+        <!-- Justificación -->
+        <TextView text="Información de Justificación" style="@style/SectionTitleStyle"/>
+
+        <TextView android:id="@+id/txtDetailJustification" style="@style/DetailTextStyle" text="Motivo: ..."/>
+        <TextView android:id="@+id/txtDetailObservations" style="@style/DetailTextStyle" text="Observaciones: ..." android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

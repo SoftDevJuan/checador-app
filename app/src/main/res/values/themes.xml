@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Usamos .Light para asegurar fondo blanco siempre -->
+    <style name="Theme.ChecadorCCL" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Tus Colores Naranja y Azul -->
+        <item name="colorPrimary">@color/color_primary_ccl</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant_ccl</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/color_secondary_ccl</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_ccl</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- ESTO ES LO QUE PONE LA BARRA NEGRA -->
+        <item name="android:statusBarColor">@color/black</item>
+
+        <!-- Forzar textos oscuros en la barra de estado (iconos de batería/hora blancos) -->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Estilo derivado para el Manifest -->
+    <style name="Theme.ChecadorCCL.NoActionBar" parent="Theme.ChecadorCCL">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ChecadorCCL.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.ChecadorCCL.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CalendarHeaderTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SectionTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="DetailTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#EEEEEE</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+</resources>

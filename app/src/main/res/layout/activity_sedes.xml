@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- 1. EL MAPA (Arriba, peso 1) -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 2. INFORMACIÓN Y LISTA (Abajo, peso 1) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- Info de Sede Cercana -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#FAFAFA"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TU SEDE MÁS CERCANA:"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/txt_nearest_sede"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculando..."
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_primary_ccl"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista de Sedes (Toca para ver)"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_secondary_ccl"/>
+
+        <!-- Lista Scrolleable -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_sedes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_sede"/>
+
+    </LinearLayout>
+
+</LinearLayout>

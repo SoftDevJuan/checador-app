@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "185597158710",
+    "project_id": "checadorccl",
+    "storage_bucket": "checadorccl.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185597158710:android:c5afb08891415474cabf97",
+        "android_client_info": {
+          "package_name": "com.example.checadorccl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPXEzHleeldBQ6OKyao5NAlcGRn3NB5Ko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

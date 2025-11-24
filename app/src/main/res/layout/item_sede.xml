@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_list"
+            app:tint="@color/color_primary_ccl"
+            android:layout_marginEnd="16dp"/>
+        <!-- Si tienes un icono de "pin" (ic_location_on), úsalo aquí -->
+
+        <TextView
+            android:id="@+id/txt_nombre_sede"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sede Zapopan"
+            android:textSize="16sp"
+            android:textColor="@color/color_text_dark"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_record"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- FILA SUPERIOR: FECHA y RESUMEN DE ESTADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/txt_record_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_text_dark"
+                tools:text="Miércoles, 15/10/2025"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- RESUMEN DE ESTADO -->
+            <TextView
+                android:id="@+id/txt_status_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/status_aprobado_bg"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="Aprobado"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- FILA DE TIEMPOS (Entrada, Salida, Horario) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_marginBottom="8dp">
+
+            <!-- Columna Entrada -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <!-- CORRECCIÓN AQUÍ: Se agregaron width y height -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrada"
+                    android:textSize="12sp"
+                    android:textColor="#999999"/>
+
+                <TextView
+                    android:id="@+id/txt_check_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_secondary_ccl"
+                    tools:text="08:30"/>
+            </LinearLayout>
+
+            <!-- Columna Salida -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <!-- CORRECCIÓN AQUÍ: Se agregaron width y height -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salida"
+                    android:textSize="12sp"
+                    android:textColor="#999999"/>
+
+                <TextView
+                    android:id="@+id/txt_check_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_secondary_ccl"
+                    tools:text="17:00"/>
+            </LinearLayout>
+
+            <!-- Columna Total -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <!-- CORRECCIÓN AQUÍ: Se agregaron width y height -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Horas"
+                    android:textSize="12sp"
+                    android:textColor="#999999"/>
+
+                <TextView
+                    android:id="@+id/txt_total_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_primary_ccl"
+                    tools:text="8.5h"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- FILA DE INCIDENCIAS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incidencias:"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginTop="4dp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_incidences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:paddingBottom="4dp">
+            <!-- Se llena dinámicamente -->
+        </LinearLayout>
+
+        <!-- BOTÓN DE ACCIÓN -->
+        <Button
+            android:id="@+id/btn_justify_incidence"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Justificar Incidencia"
+            android:textSize="12sp"
+            android:backgroundTint="@color/color_primary_ccl"
+            android:textColor="@color/white"
+            app:cornerRadius="6dp"
+            android:enabled="false"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

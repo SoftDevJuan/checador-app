@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".PermitRequestFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nueva Solicitud"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_secondary_ccl"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 1. TIPO DE EVENTO (SPINNER) -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de Permiso"
+            app:boxStrokeColor="@color/color_primary_ccl"
+            app:hintTextColor="@color/color_primary_ccl"
+            android:layout_marginBottom="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_permit_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/color_text_dark"
+                tools:text="Vacaciones" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 2. SELECTOR DE FECHAS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selección de Fechas"
+            android:textStyle="bold"
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="#CCCCCC"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="@color/color_primary_ccl"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/txt_selected_dates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toca para seleccionar fechas"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_text_dark"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 3. SUBIR ARCHIVO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evidencia / Justificante"
+            android:textStyle="bold"
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_upload_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adjuntar Archivo"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="@color/color_text_dark"
+                android:drawableLeft="@drawable/ic_list"
+                android:drawablePadding="8dp"
+                app:elevation="0dp"/>
+            <!-- Nota: Usa ic_list temporalmente o crea un ic_attach_file -->
+
+            <TextView
+                android:id="@+id/txt_file_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Ningún archivo seleccionado"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:ellipsize="middle"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <!-- 4. OBSERVACIONES -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Observaciones"
+            app:boxStrokeColor="@color/color_primary_ccl"
+            app:hintTextColor="@color/color_primary_ccl"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_observations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:minLines="3"
+                android:textColor="@color/color_text_dark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 5. BOTONES DE ACCIÓN -->
+        <Button
+            android:id="@+id/btn_submit_permit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Guardar Solicitud"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/color_primary_ccl"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_cancel_permit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Cancelar"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="#F44336"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

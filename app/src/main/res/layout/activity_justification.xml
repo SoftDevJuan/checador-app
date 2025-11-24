@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ENCABEZADO -->
+        <TextView
+            android:id="@+id/txt_incidence_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Justificar Retraso"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_secondary_ccl"/>
+
+        <TextView
+            android:id="@+id/txt_incidence_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incidencia del Miércoles 15/10"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- SECCIÓN 1: PAGO DE TIEMPO (Dinámica) -->
+        <LinearLayout
+            android:id="@+id/layout_payment_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Compensación de Tiempo"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/txt_time_owed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiempo a deber: 00:30 min"
+                android:textColor="#D32F2F"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_add_payment_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Agregar Fecha de Pago"
+                android:textSize="12sp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/color_secondary_ccl"
+                android:textColor="@color/color_secondary_ccl"/>
+
+            <!-- Aquí se añadirán las filas dinámicamente -->
+            <LinearLayout
+                android:id="@+id/container_payment_slots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:animateLayoutChanges="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+
+        <!-- SECCIÓN 2: EVIDENCIA Y COMENTARIOS (Común) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evidencia y Observaciones"
+            android:textStyle="bold"
+            android:textColor="@color/color_text_dark"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btn_take_photo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cámara"
+                android:backgroundTint="#607D8B"
+                android:drawableTop="@android:drawable/ic_menu_camera"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btn_attach_file"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Archivo"
+                android:backgroundTint="#607D8B"
+                android:drawableTop="@android:drawable/ic_menu_upload"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_evidence_preview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#F0F0F0"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/txt_file_name_justification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ningún archivo seleccionado"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Observaciones (Opcional para retrasos)"
+            app:boxStrokeColor="@color/color_primary_ccl"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_observation_justification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:gravity="top"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_submit_justification"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Enviar Justificación"
+            android:backgroundTint="@color/color_primary_ccl"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

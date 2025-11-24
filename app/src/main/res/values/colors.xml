@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PALETA INSTITUCIONAL CCL -->
+    <color name="color_primary_ccl">#F37021</color> <!-- Naranja Institucional (Botón) -->
+    <color name="color_primary_variant_ccl">#D9641E</color> <!-- Naranja Oscuro -->
+    <color name="color_secondary_ccl">#0033A0</color> <!-- Azul Institucional -->
+    <color name="color_secondary_variant_ccl">#002C8A</color> <!-- Azul Oscuro -->
+
+    <color name="color_background_soft">#FFF3E6</color> <!-- Fondo suave del login (approx) -->
+    <color name="color_text_dark">#333333</color> <!-- Texto principal -->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- COLORES FALTANTES Y EXIGIDOS POR LA HERENCIA DEL TEMA BASE -->
+    <color name="purple_200">#FFF3E6</color>
+    <color name="purple_500">#FFF3E6</color>
+    <color name="purple_700">#FFF3E6</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>

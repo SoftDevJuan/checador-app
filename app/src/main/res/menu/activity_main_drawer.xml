@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@android:drawable/ic_popup_reminder"
+            android:title="Notificaciones" />
+        <item
+            android:id="@+id/nav_records"
+            android:icon="@drawable/ic_list"
+            android:title="Mis Registros (Checadas)" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_calendar"
+            android:title="Calendario de Eventos" />
+        <item
+            android:id="@+id/nav_request_day"
+            android:icon="@drawable/ic_send"
+            android:title="Solicitar Día / Permiso" />
+        <item
+            android:id="@+id/nav_sedes"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Sedes CCL" />
+
+    </group>
+    <item android:title="Cuenta">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Cerrar Sesión" />
+        </menu>
+    </item>
+</menu>
